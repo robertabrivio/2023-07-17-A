@@ -2,7 +2,7 @@ package it.polito.tdp.gosales.model;
 
 import java.util.Objects;
 
-public class Products {
+public class Products implements Comparable<Products>{
 	
 	private int number;
 	private String line;
@@ -178,6 +178,14 @@ public class Products {
 	public String toString() {
 		return "Prodotto " + number + ": " + product;
 	}
+
+
+	@Override
+	public int compareTo(Products o) {
+		return this.getNumber()-o.getNumber();
+	}
+	
+	
 	
 
 }
